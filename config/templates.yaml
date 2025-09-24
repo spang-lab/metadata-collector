@@ -1,0 +1,59 @@
+templates:
+- name: TRR Main Template 
+  version: 1
+  id: main_template
+  project:
+    - contributors
+    - overall_design
+    - questionfor_analysis
+    - supplementary_file
+    - trr305_project
+  columns:
+    - sample_id
+    - organism
+    - tissue_type
+    - group
+    - class
+    - gender
+    - cell_type
+    - subject_id
+    - phenotype
+    - strain
+    - developmental_stage
+    - growth_protocol
+    - treatment_protocol
+    - extract_protocol
+    - sample_type
+    - molecule
+    - library_strategy
+    - library_construction_protocol
+    - library_construction_date
+    - library_construction_person
+    - library_construction_outcome
+    - adapter
+    - adapter_type
+    - adapter_index_1
+    - adapter_index_2
+    - fragment_size
+    - read_length
+    - read_sequencing_mode
+    - average_insert_size
+    - read1_filename
+    - read1_filetype
+    - read1_checksum
+    - read2_filename
+    - read2_filetype
+    - read2_checksum
+    - read_instrument
+    - comments
+    - storage_location
+    - raw_file
+    - genome_build
+    - pipeline
+    - aligner
+    - standart_deviation_insert_size
+    - data_processing_person
+    - clone
+
+
+

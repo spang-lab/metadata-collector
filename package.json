@@ -1,0 +1,44 @@
+{
+  "name": "seq-meta-data",
+  "version": "0.6.5",
+  "description": "metadata collector",
+  "main": "index.js",
+  "scripts": {
+    "dev:startdb": "docker start pg-metadata || docker run -d --name pg-metadata -p 5432:5432 -v \"./postgres:/var/lib/postgresql/data\"  --env-file .env.dev postgres:16-alpine",
+    "dev:stopdb": "docker stop pg-metadata && docker rm pg-metadata",
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "author": "Michael Huttner, Jakob Simeth",
+  "repository": "https://gitlab.spang-lab.de/containers/seq-meta-data",
+  "license": "MIT",
+  "dependencies": {
+    "@koa/router": "^10.1.1",
+    "exceljs": "^4.3.0",
+    "js-yaml": "^4.1.0",
+    "koa": "^2.13.4",
+    "koa-body": "^4.2.0",
+    "koa-compose": "^4.1.0",
+    "koa-compress": "^5.1.0",
+    "koa-favicon": "^2.1.0",
+    "koa-mount": "^4.0.0",
+    "koa-proxies": "^0.12.2",
+    "koa-session": "^6.2.0",
+    "koa-static": "^5.0.0",
+    "lodash": "^4.17.21",
+    "node-cron": "^3.0.0",
+    "node-fetch": "^3.2.3",
+    "openid-client": "^5.1.4",
+    "pg-promise": "^10.11.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.11.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "nodemon": "^2.0.15"
+  }
+}

@@ -1,0 +1,18 @@
+body {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+.content {
+    font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
+    font-size: 21px;
+    line-height: 1.58;
+}
+
+.app-body {
+    min-height: 300px;
+}
