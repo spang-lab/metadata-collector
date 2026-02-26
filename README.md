@@ -1,6 +1,11 @@
-# Metadata Collector
+# Metadata Collector: A Web Tool for Standardized Sequencing Metadata in Multi-centre Sequencing Projects
 
-Metadata collector sequencing data
+Metadata Collector is a collaborative platform for creating high‑quality, standardized metadata in multi‑centre NGS and multi‑omics studies. It provides shared templates, controlled vocabularies, and real‑time validation to prevent errors early in the workflow. With event‑based versioning and a secure, role‑aware architecture, it ensures full provenance and transparent collaboration across institutions. Its modular, ontology‑ready design makes it adaptable to a wide range of research settings.  
+  
+More detailed information on the platform’s resources and real‑world deployment is available in our preprint (to put link).
+
+## Software requirements
+...
 
 ## Development status
 
