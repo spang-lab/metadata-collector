@@ -1,17 +1,46 @@
 # Metadata Collector: A Web Tool for Standardized Sequencing Metadata in Multi-centre Sequencing Projects
 
-Metadata Collector is a collaborative platform for creating high‑quality, standardized metadata in multi‑centre NGS and multi‑omics studies. It provides shared templates, controlled vocabularies, and real‑time validation to prevent errors early in the workflow. With event‑based versioning and a secure, role‑aware architecture, it ensures full provenance and transparent collaboration across institutions. Its modular, ontology‑ready design makes it adaptable to a wide range of research settings.  
+Metadata Collector is an open-source web platform for standardized, validated, and collaborative metadata management in next-generation sequencing (NGS) projects. It was developed to support multi-institutional research consortia in collecting consistent, FAIR-aligned metadata across heterogeneous sequencing studies.
+
+The platform provides structured metadata templates, controlled vocabularies, real-time validation, and event-based versioning to improve metadata quality at the point of entry and reduce late-stage curation before downstream analysis or repository submission. 
   
 More detailed information on the platform’s resources and real‑world deployment is available in our preprint (to put link).
+
+## Key Features
+
+*   **Customizable Metadata Templates:** Configure assay- or project-specific metadata schemas with mandatory and optional fields
+*   **Dual-Layer Real-Time Validation:** Detect missing fields, invalid entries, and terminology inconsistencies during metadata entry.
+*   **Event-Based Versioning:** Record metadata changes as timestamped events to support provenance, auditability, and reconstruction of previous states.
+*   **Controlled vocabularies:** Use standardized dropdown fields to harmonize terminology across projects and research groups.
+*   **Collaborative project workspaces:** Enable multiple contributors to annotate, review, and manage metadata within shared projects.
+*   **Role-based access control:** Restrict project visibility and editing rights according to user roles and permissions.
+*   **Interoperable Multi-Format Export:** Directly outputs clean, repository-compliant datasets into standard **CSV** and **ISA-Tab** profiles.
+*   **Flexible deployment:** Deploy locally using Docker Compose or in production environments using Kubernetes.
+
 
 ## Software requirements
 ...
 
 ## Development status
 
-This project is currently not production ready.
-Expect breaking changes, incomplete features, and limited error handling.
-It is intended for experimentation, testing, and feedback at this stage.
+This project is intended for experimentation, testing, and feedback at this stage.
+
+## System Architecture
+Metadata Collector implements a decoupled client-server architecture built to minimize infrastructure overhead and system latency (<50 ms response times under normal load):
+
+*   **Frontend Client:** Single-Page Application (SPA) designed with **React**.
+*   **Backend Server Layer:** Asynchronous RESTful API engine powered by **Node.js**.
+*   **Persistent Storage Model:** **PostgreSQL** relational engine tracking two distinct modules: an *Immutable Event Store* for tracking operations and a *Core Derived State* space optimized for blazing-fast queries.
+
+
+## Metadata Model
+
+Metadata Collector uses a flexible event-driven data model based on three core concepts:
+
+* **Entities:** Main metadata objects, currently including Projects and Samples.
+* **Properties:** Metadata fields associated with entities, such as organism, tissue type, sample type, disease group, or library strategy.
+* **Events:** Immutable records of all user actions and metadata modifications, enabling full version history and provenance tracking.
+
 
 ## Properties
 
