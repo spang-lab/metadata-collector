@@ -18,7 +18,9 @@ More detailed information on the platform’s resources and real‑world deploym
 *   **Flexible deployment:** Deploy locally using Docker Compose or in production environments using Kubernetes.
 
 ## Graphical Abstract
-
+<p align="center">
+  <img src="client/dist/images/graphical_abstract.jpg" alt="Metadata Collector Graphical Abstract" width="600"/>
+</p>
 
 ## Software requirements
 ...
