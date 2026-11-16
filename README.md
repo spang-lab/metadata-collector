@@ -17,6 +17,8 @@ More detailed information on the platform’s resources and real‑world deploym
 *   **Interoperable Multi-Format Export:** Directly outputs clean, repository-compliant datasets into standard **CSV** and **ISA-Tab** profiles.
 *   **Flexible deployment:** Deploy locally using Docker Compose or in production environments using Kubernetes.
 
+## Graphical Abstract
+
 
 ## Software requirements
 ...
