@@ -4,7 +4,7 @@ Metadata Collector is an open-source web platform for standardized, validated, a
 
 The platform provides structured metadata templates, controlled vocabularies, real-time validation, and event-based versioning to improve metadata quality at the point of entry and reduce late-stage curation before downstream analysis or repository submission. 
   
-More detailed information on the platform’s resources and real‑world deployment is available in our preprint (to put link).
+More detailed information on the platform’s resources and real‑world deployment is available in our preprint https://doi.org/10.64898/2026.06.05.730314.
 
 ## Key Features
 
