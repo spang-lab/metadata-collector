@@ -7,7 +7,7 @@ What does it do?
 - Supports configurable fields and constrained input, including selected values and regular-expression validation.
 - Allows authorized contributors to access and revise project metadata.
 - Records property modifications and supports retrieval of earlier annotation states.
-- Provides structured export for downstream workflows (verify available formats and their conformance in the release).
+- Provides structured export for downstream workflows (CSV, XLSX).
   
 Intended use: metadata coordination during planning, sample annotation, sequencing preparation, and bioinformatics processing. Metadata Collector is not a replacement for a laboratory information management system, ontology authoring platform, or repository submission portal.
 
@@ -17,31 +17,37 @@ More detailed information on the platform’s resources and real‑world deploym
 ## Interface preview
 
 <p align="center">
-  <img src="client/dist/images/home_page.jpg" alt="Metadata Collector Homepage" width="800"/>
+  <img src="client/dist/images/home_page.jpg" alt="Metadata Collector Homepage" width="600"/>
 </p>
 
+<p align="center">
+  <img src="client/dist/images/project_dashboard.jpg" alt="Metadata Collector Project Dashboard" width="600"/>
+</p>
+
+## Architecture
+The public codebase contains a React client, a Node.js/Koa API, and PostgreSQL-backed metadata entities, properties, events, and permissions. Production deployment in TRR305 uses institutional services.
+
 ## Software requirements
-...
+Node.js: specify an actively supported version tested with the software.
+npm: specify the tested major version.
+PostgreSQL: specify the tested database version.
+Authentication: describe required OpenID Connect provider, local-development mode, and callback URL configuration.
+Required environment variables: document names and safe example values in .env.example (never publish credentials).
 
 ## Development status
-
 This project is intended for experimentation, testing, and feedback at this stage.
 
-## System Architecture
-Metadata Collector implements a decoupled client-server architecture built to minimize infrastructure overhead and system latency (<50 ms response times under normal load):
-
-*   **Frontend Client:** Single-Page Application (SPA) designed with **React**.
-*   **Backend Server Layer:** Asynchronous RESTful API engine powered by **Node.js**.
-*   **Persistent Storage Model:** **PostgreSQL** relational engine tracking two distinct modules: an *Immutable Event Store* for tracking operations and a *Core Derived State* space optimized for blazing-fast queries.
-
-
-## Metadata Model
-
-Metadata Collector uses a flexible event-driven data model based on three core concepts:
-
-* **Entities:** Main metadata objects, currently including Projects and Samples.
-* **Properties:** Metadata fields associated with entities, such as organism, tissue type, sample type, disease group, or library strategy.
-* **Events:** Immutable records of all user actions and metadata modifications, enabling full version history and provenance tracking.
+## Installation and local development
+The public project currently provides package.json files for the server and client, but a complete independently tested installation sequence has not yet been established in this README.
+1. Clone the repository:
+```sh
+git clone https://github.com/spang-lab/metadata-collector.git
+cd metadata-collector
+```
+2. Configure PostgreSQL and authentication according to docs/configuration.md (to be added).
+3. Install server and client dependencies using the tested package-manager commands (to be confirmed).
+4. Start the backend and frontend using the tested commands (to be confirmed).
+5. Open the documented localhost URL and perform the smoke test below.
 
 
 ## Properties
