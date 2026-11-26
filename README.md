@@ -1,26 +1,20 @@
 # Metadata Collector: A Web Tool for Standardized Sequencing Metadata in Multi-centre Sequencing Projects
 
-Metadata Collector is an open-source web platform for standardized, validated, and collaborative metadata management in next-generation sequencing (NGS) projects. It was developed to support multi-institutional research consortia in collecting consistent, FAIR-aligned metadata across heterogeneous sequencing studies.
+Metadata Collector is an open-source web application designed to coordinate project- and sample-level metadata across research groups and bioinformatics core facilities. Developed in the TRR305 consortium, it provides configurable metadata properties, controlled value selection, project-level access permissions, and event-based history with retrieval of previous annotation states.
 
-The platform provides structured metadata templates, controlled vocabularies, real-time validation, and event-based versioning to improve metadata quality at the point of entry and reduce late-stage curation before downstream analysis or repository submission. 
+What does it do?
+- Organizes sequencing metadata into projects and linked sample records.
+- Supports configurable fields and constrained input, including selected values and regular-expression validation.
+- Allows authorized contributors to access and revise project metadata.
+- Records property modifications and supports retrieval of earlier annotation states.
+- Provides structured export for downstream workflows (verify available formats and their conformance in the release).
+  
+Intended use: metadata coordination during planning, sample annotation, sequencing preparation, and bioinformatics processing. Metadata Collector is not a replacement for a laboratory information management system, ontology authoring platform, or repository submission portal.
+
   
 More detailed information on the platform’s resources and real‑world deployment is available in our preprint https://doi.org/10.64898/2026.06.05.730314.
 
-## Key Features
-
-*   **Customizable Metadata Templates:** Configure assay- or project-specific metadata schemas with mandatory and optional fields
-*   **Dual-Layer Real-Time Validation:** Detect missing fields, invalid entries, and terminology inconsistencies during metadata entry.
-*   **Event-Based Versioning:** Record metadata changes as timestamped events to support provenance, auditability, and reconstruction of previous states.
-*   **Controlled vocabularies:** Use standardized dropdown fields to harmonize terminology across projects and research groups.
-*   **Collaborative project workspaces:** Enable multiple contributors to annotate, review, and manage metadata within shared projects.
-*   **Role-based access control:** Restrict project visibility and editing rights according to user roles and permissions.
-*   **Interoperable Multi-Format Export:** Directly outputs clean, repository-compliant datasets into standard **CSV** and **ISA-Tab** profiles.
-*   **Flexible deployment:** Deploy locally using Docker Compose or in production environments using Kubernetes.
-
-## Graphical Abstract
-<p align="center">
-  <img src="client/dist/images/graphical_abstract.jpg" alt="Metadata Collector Graphical Abstract" width="600"/>
-</p>
+## Interface preview
 
 ## Software requirements
 ...
