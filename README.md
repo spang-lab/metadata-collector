@@ -16,6 +16,10 @@ More detailed information on the platform’s resources and real‑world deploym
 
 ## Interface preview
 
+<p align="center">
+  <img src="client/dist/images/home_page.jpg" alt="Metadata Collector Homepage" width="800"/>
+</p>
+
 ## Software requirements
 ...
 
